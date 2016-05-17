@@ -40,6 +40,6 @@ make -j8
 }
 
 package() {
-  cd "$srcdir/$pkgname-$pkgver.$pkgrel"
+  cd "$srcdir/$pkgname-$pkgver.$pkgrel-src"
   make DESTDIR="$pkgdir" install
 }
