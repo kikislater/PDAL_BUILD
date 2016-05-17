@@ -5,9 +5,21 @@ pkgver=1.2
 pkgrel=0
 pkgdesc="PDAL is a C++ BSD library for translating and manipulating point cloud data. It is very much like the GDAL library which handles raster and vector data. See Readers and Writers for data formats PDAL supports, and see Filters for filtering operations that you can apply with PDAL."
 arch=('i686' 'x86_64')
+depends=('cython'
+         'gdal (gdal-filegdb)'
+         'libgeotiff'
+         'sqlite'
+         'libspatialite'
+         'spatialindex'
+         'python-pip'
+         'libharu'
+         'liblas'
+         'pcl'
+         'postgresql')
+makedepends=('cmake')
 url="http://www.pdal.io/"
 license=('BSD')
-source=("http://download.osgeo.org/pdal/PDAL-1.2.0-src.tar.gz")
+source=("http://download.osgeo.org/pdal/$pkgname-$pkgver.$pkgrel-src.tar.gz")
 md5sums=('50ea275b74d722015358a6daae29e190')
 
 build() {
